@@ -6,8 +6,11 @@ import { SettingsComponent } from './settings';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'chan',
     pathMatch: 'full'
+  }, {
+    path: 'chan',
+    loadChildren: 'app/chan/chan.module#ChanModule'
   },
   {
     path: 'settings',
@@ -22,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'about'
+    redirectTo: 'chan'
   }
 ];
 
